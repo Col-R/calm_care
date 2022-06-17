@@ -1,19 +1,20 @@
 require('dotenv').config();
+
 const express = require('express');
+const appointmentRoutes = require('./routes/appointment')
 
 // express app
 const app = express();
 
 // middleware
+app.use(express.json())
 app.use((req, res, next)=> {
     console.log(req.path, req.method);
     next()
 })
 
-// route
-app.get('/', (req, res) => {
-    res.json({message: "Welcome to the app"})
-})
+// routes
+app.use('/api/appointment',appointmentRoutes)
 
 // request listener
 const PORT = process.env.PORT || 5000;
