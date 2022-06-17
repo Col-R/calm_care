@@ -22,6 +22,7 @@
 ### Backend Development
 * Node.js - version 16.15.0
 * Express.js - version 4.18.1
+* Mongoose - version 6.4.0
 
 ### Frontend Development
 
