@@ -1,7 +1,7 @@
 
 
 # Calm Commerce
-> Log in, create some custom golf loadouts, and check in with other users to see what gear they're using!
+> Schedule a spa day!
 
 ## Table of contents
 * [General info](#general-info)
