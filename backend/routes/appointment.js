@@ -1,4 +1,5 @@
 const express = require('express')
+const Appointment = require('../models/appointmentModel')
 
 const router = express.Router();
 
@@ -13,8 +14,14 @@ router.get('/:id', (req, res) =>{
 })
 
 // book an appointment
-router.post('/', (req, res) =>{
-    res.json({mssg: 'post new appointment'})
+router.post('/', async (req, res) => {
+    const {user, description, date} = req.body;
+    try {
+        const appointment = await Appointment.create({user, description, date})
+        res.status(200).json(appointment)
+    } catch (error) {
+        res.status(400).json({error: error.message})
+    }
 })
 
 // cancel appointment
