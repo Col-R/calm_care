@@ -59,8 +59,27 @@ const deleteAppointment = async(req, res) => {
 
 // update appointment
 
+const updateAppointment = async(req, res) => {
+    const {id} = req.params;
+
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+        return res.status(404).json({error: "No matching appointment"})
+    }
+
+    const appointment = await Appointment.findOneAndUpdate({_id: id}, {
+        ...req.body
+    })
+
+    if (!appointment){
+        return res.status(404).json({error: 'No matching appointment'})
+    }
+    res.status(200).json(appointment)
+}
+
 module.exports = {
     getAppointments,
     getOneAppointment,
-    createAppointment
+    createAppointment,
+    deleteAppointment,
+    updateAppointment
 }

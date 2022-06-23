@@ -2,7 +2,9 @@ const express = require('express')
 const {
     createAppointment,
     getAppointments,
-    getOneAppointment
+    getOneAppointment,
+    deleteAppointment,
+    updateAppointment
 } = require('../controller/appointmentController')
 
 
@@ -18,13 +20,9 @@ router.get('/:id', getOneAppointment)
 router.post('/', createAppointment)
 
 // cancel appointment
-router.delete('/:id', (req, res) =>{
-    res.json({mssg: 'delete appointment'})
-})
+router.delete('/:id', deleteAppointment)
 
 // reschedule an appointment
-router.patch('/:id', (req, res) =>{
-    res.json({mssg: 'UPDATE an appointment'})
-})
+router.patch('/:id', updateAppointment)
 
 module.exports = router;
