@@ -1,8 +1,11 @@
 require('dotenv').config();
 
 const express = require('express');
-const mongoose = require('mongoose');
+const connectDB = require('./config/db');
 const appointmentRoutes = require('./routes/appointment')
+const serviceRoutes = require('./routes/service')
+
+connectDB();
 
 // express app
 const app = express();
@@ -16,20 +19,14 @@ app.use((req, res, next)=> {
 
 // routes
 app.use('/api/appointment',appointmentRoutes)
+app.use('/api/service',serviceRoutes)
 
-// connect to DB
-mongoose.connect(process.env.MONGO_URI)
-    .then(()=> {
-        const PORT = process.env.PORT || 5000;
-        app.listen(PORT, () => {
-            console.log(`Server running on port ${PORT}`)
-        })
-    })
-    .catch((err)=>{
-        console.log(err)
-    })
+// connect to DB done in config file
+
 
 // request listener
 
 
 // nodemon backend/server.js to check if server is up and running
+
+module.exports = connectDB;
