@@ -15,4 +15,6 @@ const services = [
         name: 'Couples 90-minute VIP massage',
         price: 380
     }
-]
+];
+
+module.exports = services;

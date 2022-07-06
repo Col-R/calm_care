@@ -6,22 +6,27 @@ import {useEffect, useState} from 'react';
 
 
 const Home = () => {
+    const [appointments, setAppointments] = useState(null)
 
     // useEffect hook
     useEffect(() => {
         const fetchServices = async () => {
-            const response = await fetch('http://localhost:3000/api/services')
+            const response = await fetch('/api/appointments')
             const json = await response.json()
-
             if (response.ok) {
-
+                setAppointments(json)
             }
         }
         fetchServices()
     }, [])
+
     return (
         <div className="homescreen">
-            <h2 className = "homescreen__title">Our Services</h2>
+            <div className="appointments">
+                {appointments && appointments.map((appointment) =>  ( //only if there is a value for appointments, map through them. 
+                    <p key={appointment._id}>{appointment.description}  </p>
+                ))}
+            </div>
         </div>
     )
 }

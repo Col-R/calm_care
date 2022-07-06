@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const servicesData = require('./data/services')
-const connectDB = require('./server')
+const connectDB = require('./config/db')
 const Service = require('./models/serviceModel') 
 
 connectDB();
@@ -19,3 +19,5 @@ const importData = async () => {
 }
 
 importData()
+
+// script to run data import in main package.json

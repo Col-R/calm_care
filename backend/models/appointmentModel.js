@@ -16,7 +16,8 @@ const appointmentSchema = new Schema({
     }
 }, { timestamps: true })
 
-module.exports = mongoose.model('Appointment', appointmentSchema)
+const Appointment = mongoose.model('Appointment', appointmentSchema);
+module.exports = Appointment;
 
 // Appointment.find()
 
