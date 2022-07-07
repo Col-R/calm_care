@@ -1,9 +1,10 @@
-.homescreen {
+.homepage {
     max-width: 1300px;
     margin: 1rem auto;
+    background-color: #494f55
 }
 
-.homescreen__title {
+.homepage {
     font-size: 1.5rem;
     color: #171717;
     margin-bottom: 1rem;

@@ -4,14 +4,35 @@ import React from 'react'
 
 const Navbar = () => {
     return (
-        <nav className = "navbar">
-            <div>
-                <Link to="/" className = "navbar__logo" style={{ textDecoration: 'none' }}>
-                    <h2>Calm Care</h2>
-                </Link>
+        <nav className="navbar">
+            {/*logo*/}
+            <div className="navbar__logo">
+                <h2>Calm Care Massage</h2>
             </div>
-            {/* Navbar links */}
 
+            {/*links*/}
+            <ul className="navbar__links">
+                <li>
+                    <Link to = "/">
+                        Services
+                    </Link>
+                </li>
+                <li>
+                    <Link to ="/cart" className = "cart__link">
+                        {/*Icon*/}
+                        <i className = "fas fa-shopping-cart"></i>
+                        Cart
+                        <span className = "cartlogo__badge">0</span>
+                    </Link>
+                </li>
+            </ul>
+
+            {/*hamburger menu for mobile*/}
+            <div className="hamburgerMenu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </nav>
     )
 }

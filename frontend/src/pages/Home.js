@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import './Home.css'
 
 //components
 import ServiceDetails from '../components/ServiceDetails';
