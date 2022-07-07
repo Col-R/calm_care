@@ -14,15 +14,15 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
 
 // middleware
-// app.use(express.json())
-// app.use((req, res, next)=> {
-//     console.log(req.path, req.method);
-//     next()
-// })
+app.use(express.json())
+app.use((req, res, next)=> {
+    console.log(req.path, req.method);
+    next()
+})
 
 // routes
-// app.use('/api/appointment',appointmentRoutes)
-// app.use('/api/service',serviceRoutes)
+app.use('/api/appointment',appointmentRoutes)
+app.use('/api/service',serviceRoutes)
 
 // connect to DB done in config file
 
