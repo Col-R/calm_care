@@ -1,7 +1,7 @@
 
 
 # Calm Commerce
-> Schedule a spa day!
+> Select a massage!
 
 ## Table of contents
 * [General info](#general-info)
