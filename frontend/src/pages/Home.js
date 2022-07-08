@@ -11,7 +11,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchServices = async () => {
-      const response = await fetch('/api/service/services')
+      const response = await fetch('/api/service/services') /* TODO: Install CORS package to avoid this hacky workaround. See frontend/package.json */
       const json = await response.json()
 
       if (response.ok) {
@@ -26,9 +26,17 @@ const Home = () => {
 
     return (
     <div className="homepage">
-      {services && services.map((service) => (
-        <p key={service._id}>{service.name}</p>
-      ))}
+      <h2 className = "homescreen__title">Services</h2>
+        <div className="homescreen__services">
+        {services && services.map((service) => (
+          // <p key={service._id}>{service.name}</p>
+          <ServiceDetails 
+          key={service._id} 
+          serviceId = {service._id}
+          service = {service} 
+          />
+        ))}
+        </div>
     </div>
     )
 }

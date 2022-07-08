@@ -10,3 +10,20 @@
     margin-bottom: 1rem;
     margin-left: 8px;
 }
+
+.homescreen__services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1232px) {
+    .homescreen__services {
+      grid-template-columns: repeat(2, auto);
+    }
+}
+  
+  @media (max-width: 950px) {
+    .homescreen__services {
+      grid-template-columns: repeat(1, auto);
+    }
+}
