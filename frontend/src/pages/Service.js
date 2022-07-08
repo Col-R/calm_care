@@ -1,9 +1,44 @@
-import React from 'react'
+import './Service.css'
+
+import React, { useState, useEffect } from 'react';
+import {useParams, Link, useNavigate} from 'react-router-dom';
+
+//components
+import ServiceDetails from '../components/ServiceDetails';
+
+//Actions
+
+// ToDo: use 
+  // useEffect(() => {
+  //   const fetchServices = async () => {
+  //     const response = await fetch('/api/service/services/:id')
+// to get one by id, where id is gathered from useParams().
+// just like how it is done in Home.js page
 
 const Service = () => {
+  const {id}  = useParams();
+  const [detailService, setDetailService] = useState(null)
+
+  useEffect(() => {
+    const fetchOneService = async () => {
+      const response = await fetch (`/api/service/services/${id}`)
+      console.log(id)
+      const json = await response.json()
+
+      if (response.ok){
+        setDetailService(json)
+      } else {
+        console.log('response not ok')
+      }
+    }
+    fetchOneService()
+  }, [])
+
   return (
-    <div>Service</div>
+    <div>
+      Display {id}
+    </div>
   )
 }
 
-export default Service
+export default Service;
