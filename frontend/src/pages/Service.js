@@ -22,7 +22,7 @@ const Service = () => {
   useEffect(() => {
     const fetchOneService = async () => {
       const response = await fetch (`/api/service/services/${id}`)
-      console.log(id)
+      console.log(response)
       const json = await response.json()
 
       if (response.ok){
