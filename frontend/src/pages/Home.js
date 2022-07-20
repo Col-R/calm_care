@@ -1,6 +1,4 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom'
+import React, {useEffect, useState } from 'react';
 import './Home.css'
 
 //components
@@ -33,7 +31,9 @@ const Home = () => {
           <ServiceDetails 
           key={service._id} 
           serviceId = {service._id}
-          service = {service} 
+          name = {service.name} 
+          price = {service.price}
+          imageUrl = {service.ImageUrl}
           />
         ))}
         </div>

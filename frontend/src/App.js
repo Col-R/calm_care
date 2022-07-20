@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 // components
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 
 //pages
@@ -24,6 +25,7 @@ function App() {
             <Route path="/service/:id" element={<Service/>} />
           </Routes>
         </main>
+        <Footer />
       </BrowserRouter>
     </div>
   );

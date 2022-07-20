@@ -1,0 +1,63 @@
+import './Footer.css';
+
+import React from 'react'
+
+const Footer = () => {
+  return (
+    <div class="section footer-classic context-dark bg-image">
+        <div class="container">
+          <div class="row row-30">
+            <div class="col-md-4 col-xl-5">
+              <div class="pr-xl-4"><a class="brand" href="index.html">
+              <img class="brand-logo-light" src="https://dummyimage.com/140x37/f1f1f1/000.jpg" alt="" width="140" height="37" srcset="https://dummyimage.com/140x37/f1f1f1/000.jpg 2x"/></a>
+                <p>The professionals at Stillwater Calm Care provide complete, customized wellness services designed to help you relax, restore and recuperate. We offer massage therapy for individuals, couples, and friends. We also offer life coaching, small support groups, workshops, events and several other modalities. Our offices are housed in a beautiful boutique office setting in downtown Stillwater, MN.</p>
+                {/* Rights */}
+                <p class="rights"><span>©  </span><span class="copyright-year">2022</span><span> </span><span>Col-R</span><span> - </span><span>All Rights Reserved.</span></p>
+                <p class="rights"><span>Made by <a href="https://github.com/Col-R/calm_care">Cole Robinson</a></span></p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <h5>Visit Us!</h5>
+              <dl class="contact-list">
+                <dt>Address:</dt>
+                    <dd>Stillwater Calm Care</dd>
+                    <dd>275 3rd Street South, Suite 103</dd>
+                    <dd>Stillwater, Minnesota 55082</dd>
+              </dl>
+              <h5>For Scheduling: </h5>
+              <dl class="contact-list">
+                <dt>Write:</dt>
+                <dd><a href="mailto:Susan@stillwatercalmcare.com">Susan@stillwatercalmcare.com</a></dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>Call or Text:</dt>
+                <dd><a href="tel:#">123-555-6789</a>
+                </dd>
+              </dl>
+            </div>
+            <div class="col-md-4 col-xl-3">
+              <h5>Links (check back later)</h5>
+              <ul class="nav-list">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacts</a></li>
+                <li><a href="#">Pricing</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        {/* Social Links */}
+        { /* Not using in current version 
+        <div class="row no-gutters social-container">
+          <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-facebook"></span><span>Facebook</span></a></div>
+          <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-instagram"></span><span>Instagram</span></a></div>
+          <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-twitter"></span><span>Twitter</span></a></div>
+          <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-youtube-play"></span><span>Youtube</span></a></div>
+        </div>
+        */}
+      </div>
+  )
+}
+
+export default Footer

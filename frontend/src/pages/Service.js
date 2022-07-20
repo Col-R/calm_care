@@ -1,10 +1,9 @@
 import './Service.css'
 
 import React, { useState, useEffect } from 'react';
-import {useParams, Link, useNavigate} from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 
 //components
-import ServiceDetails from '../components/ServiceDetails';
 
 //Actions
 
@@ -28,7 +27,7 @@ const Service = () => {
       if (response.ok){
         setDetailService(json)
       } else {
-        console.log('response not ok')
+        console.log('response not ok' + detailService)
       }
     }
     fetchOneService()

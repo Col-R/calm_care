@@ -3,12 +3,16 @@ import './ServiceDetails.css';
 import {Link} from 'react-router-dom';
 
 
-const ServiceDetails = ({service, serviceId}) => {
+const ServiceDetails = ({imageUrl, name, price, serviceId}) => {
     return (
         <div className="service__details">
+        <img className = "service__image"
+        src={imageUrl}
+        alt={name}
+        />
             <div className="service__info">
-                <p className="info__name">{service.name}</p>
-                <p className="info__price">${service.price}</p>
+                <p className="info__name">{name}</p>
+                <p className="info__price">${price}</p>
                 <Link to={`/service/${serviceId}`} className="info__button">
                 View
                 </Link>
