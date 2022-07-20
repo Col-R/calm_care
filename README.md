@@ -22,10 +22,10 @@
 ### Backend Development
 * Node.js - version 16.15.0
 * Express.js - version 4.18.1
-* Mongoose - version 6.4.0
+* MongoDB - version 5.0.9
 
 ### Frontend Development
-
+* React.js - version 18.1.0
 
 ## Setup
 To try out this project:
@@ -41,7 +41,20 @@ To try out this project:
 ## Code Examples
 ### Route 1
 ```javascript
+  useEffect(() => {
+    const fetchServices = async () => {
+      const response = await fetch('/api/service/services') /* TODO: Install CORS package to avoid this hacky workaround. See frontend/package.json */
+      const json = await response.json()
 
+      if (response.ok) {
+        setServices(json)
+      } else {
+        console.log('response not ok')
+      }
+    }
+
+    fetchServices()
+  }, [])
 ```
 ### Route 2
 ``` javascript
@@ -54,7 +67,7 @@ To try out this project:
 In progress
 
 ## Inspiration
-My local massage place has a strangely outdated website, so I decided to build one myself! This is not intended for production use, just a project idea at this time of inception.
+Little project where I build a nice modern site showcasing the services of a local small business! This is not intended for production use, just a project idea at this time of inception.
 
 ## Contact
 Created by Cole Robinson (https://www.linkedin.com/in/cwrobinson-/)
