@@ -43,7 +43,7 @@ To try out this project:
 ```javascript
   useEffect(() => {
     const fetchServices = async () => {
-      const response = await fetch('/api/service/services') /* TODO: Install CORS package to avoid this hacky workaround. See frontend/package.json */
+      const response = await fetch('/api/service/services')
       const json = await response.json()
 
       if (response.ok) {
