@@ -36,13 +36,15 @@ const Footer = () => {
               </dl>
             </div>
             <div class="col-md-4 col-xl-3">
-              <h5>Links (check back later)</h5>
+              <h5>Hours</h5>
               <ul class="nav-list">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contacts</a></li>
-                <li><a href="#">Pricing</a></li>
+                <li>Monday 9:00 am - 4:00 pm</li>
+                <li>Tuesday 9:00 am - 4:00 pm</li>
+                <li>Wednesday 9:00 am - 7:00 pm</li>
+                <li>Thursday 9:00 am - 7:00 pm</li>
+                <li>Friday 9:00 am - 7:00 pm</li>
+                <li>Saturday 9:00 am - 4:00 pm</li>
+                <li>Sunday Closed</li>
               </ul>
             </div>
           </div>
