@@ -4,7 +4,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div class="section footer-classic context-dark bg-image">
+    <div className="section footer-classic context-dark bg-image">
         <div class="container">
           <div class="row row-30">
             <div class="col-md-4 col-xl-5">
