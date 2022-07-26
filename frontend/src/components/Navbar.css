@@ -22,9 +22,13 @@
 }
 
 .navbar__logo h2 {
-    color: #000000;
+    color: #fff;
     opacity: 1.0;
-    background-color: #90c9c2;
+    background-color: #1C9FA3;
+    /* border: 1px solid #fff; */
+
+    box-shadow: 8px 3px 3px #fff;
+
     font-weight: bold;
     font-size: 1.4rem;
     text-decoration: none;
