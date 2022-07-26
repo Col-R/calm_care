@@ -23,21 +23,30 @@ const Home = () => {
   }, [])
 
     return (
-    <div className="homepage">
-      <h2 className = "homescreen__title">Services</h2>
-        <div className="homescreen__services">
-        {services && services.map((service) => (
-          // <p key={service._id}>{service.name}</p>
-          <ServiceDetails 
-          key={service._id} 
-          serviceId = {service._id}
-          name = {service.name} 
-          price = {service.price}
-          imageUrl = {service.ImageUrl}
-          />
-        ))}
+    <main>
+      <div className = "container">
+        <div className="row">
+        <div className="col"></div>
+          <div className="homepage col-auto">
+            <h2 className = "homescreen__title_1">Services</h2>
+            <h5 className="homescreen__subtitle">Calm Care offers a variety of premium services, all with the same goal: Getting you to your happy place.</h5>
+              <div className="homescreen__services">
+              {services && services.map((service) => (
+                // <p key={service._id}>{service.name}</p>
+                <ServiceDetails 
+                key={service._id} 
+                serviceId = {service._id}
+                name = {service.name} 
+                price = {service.price}
+                imageUrl = {service.ImageUrl}
+                />
+              ))}
+              </div>
+          </div>
+          <div className="col"></div>
         </div>
-    </div>
+      </div>
+    </main>
     )
 }
   
