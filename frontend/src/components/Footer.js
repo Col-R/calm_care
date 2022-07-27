@@ -8,8 +8,8 @@ const Footer = () => {
         <div class="container">
           <div class="row row-30">
             <div class="col-md-4 col-xl-5">
-              <div class="pr-xl-4"><a class="brand" href="index.html">
-              <img class="brand-logo-light" src="https://images.unsplash.com/photo-1522856339183-9a8b06b05937?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="cat relaxing" width="100"/></a>
+              <div class="pr-xl-4">
+              <img class="brand-logo-light" src="https://images.unsplash.com/photo-1522856339183-9a8b06b05937?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="cat relaxing" width="100"/>
                 <p>The professionals at Stillwater Calm Care provide complete, customized wellness services designed to help you relax, restore and recuperate. We offer massage therapy for individuals, couples, and friends. We also offer life coaching, small support groups, workshops, events and several other modalities. Our offices are housed in a beautiful boutique office setting in downtown Stillwater, MN.</p>
                 {/* Rights */}
                 <p class="rights"><span>©  </span><span class="copyright-year">2022</span><span> </span><span>Col-R</span><span> - </span><span>All Rights Reserved.</span></p>
