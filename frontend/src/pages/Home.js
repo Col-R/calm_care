@@ -26,8 +26,8 @@ const Home = () => {
     <main>
       <div className = "container">
         <div className="row">
-        <div className="col"></div>
-          <div className="homepage col-auto">
+        
+          <div className="homepage col-8">
             <h2 className = "homescreen__title_1">Services</h2>
             <h5 className="homescreen__subtitle">Calm Care offers a variety of premium services, all with the same goal: Getting you to your happy place.</h5>
               <div className="homescreen__services">
@@ -43,7 +43,6 @@ const Home = () => {
               ))}
               </div>
           </div>
-          <div className="col"></div>
         </div>
       </div>
     </main>
