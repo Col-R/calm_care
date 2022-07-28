@@ -2,10 +2,21 @@
     background-color: #e5ddc3;
 } */
 
-.landing__text, .hero__img{
+.landing__main{
     background-color: #e5ddc3;
 }
 
-/* .hero__img {
-    float: right;
-} */
+.landing__text {
+    padding: 3em;
+}
+
+.hero__img {
+    display: flex;
+    padding-bottom: 3em;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__img img {
+    width: 50%;
+}
