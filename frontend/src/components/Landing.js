@@ -7,7 +7,7 @@ const Landing = () => {
       <div className="landing__main">
         <div className="landing__text">
           <div>
-          All about the calm. . .<br></br>
+          <span id = "landing_text_title">All about the calm. . .</span><br></br>
             <br></br>
             The professionals at Stillwater Calm Care provide complete, customized wellness services designed to help you relax, restore and recuperate. We offer massage therapy for individuals, couples, and friends. We also offer life coaching, small support groups, workshops, events and several other modalities . Our offices are housed in a beautiful boutique office setting in downtown Stillwater, MN.
             <br></br><br></br>

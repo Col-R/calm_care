@@ -20,3 +20,9 @@
 .hero__img img {
     width: 50%;
 }
+
+#landing_text_title {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-size: 2rem;
+}
