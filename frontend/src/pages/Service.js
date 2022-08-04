@@ -1,6 +1,7 @@
 import './Service.css'
 
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import {useParams} from 'react-router-dom';
 
 //components
@@ -14,28 +15,20 @@ import {useParams} from 'react-router-dom';
 // to get one by id, where id is gathered from useParams().
 // just like how it is done in Home.js page
 
-const Service = () => {
+const Service = (props) => {
   const {id}  = useParams();
-  const [detailService, setDetailService] = useState(null)
+  const [details, setDetails] = useState({})
 
   useEffect(() => {
-    const fetchOneService = async () => {
-      const response = await fetch (`/api/service/services/${id}`)
-      console.log(response)
-      const json = await response.json()
-
-      if (response.ok){
-        setDetailService(json)
-      } else {
-        console.log('response not ok' + detailService)
-      }
-    }
-    fetchOneService()
-  }, [])
+    axios
+      .get("http://localhost:5000/api/service/services/" + id)
+      .then((res) => console.log(res.data))
+      .catch((err) => console.log(err))
+  }, [props.id])
 
   return (
     <div>
-      Display {id}
+      Display {details.id}
     </div>
   )
 }
