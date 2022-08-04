@@ -31,3 +31,8 @@ app.use('/api/service',serviceRoutes)
 
 
 // nodemon backend/server.js to check if server is up and running
+
+// for deployment
+if (process.env.NODE_ENV === 'production'){
+    app.use(express.static('frontend/build'))
+}
