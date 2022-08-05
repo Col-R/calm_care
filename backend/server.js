@@ -1,9 +1,11 @@
 require('dotenv').config();
 
+
 const express = require('express');
 const connectDB = require('./config/db');
 const appointmentRoutes = require('./routes/appointment')
 const serviceRoutes = require('./routes/service')
+const path = require('path')
 
 connectDB();
 
@@ -11,7 +13,7 @@ connectDB();
 const app = express();
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
+
 
 // middleware
 app.use(express.json())
@@ -32,7 +34,11 @@ app.use('/api/service',serviceRoutes)
 
 // nodemon backend/server.js to check if server is up and running
 
-// for deployment
+// serve build folder if in production
 if (process.env.NODE_ENV === 'production'){
-    app.use(express.static('frontend/build'))
+    app.use(express.static('frontend/build'));
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'))
+    })
 }
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
